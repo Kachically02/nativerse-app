@@ -29,16 +29,18 @@ function Welcome() {
     </div>
   </div>
     </div>
-    <Link to="/yoruba">
+    
     <div className='col-sm-6 col-lg-3'>
+    <Link to="/yoruba">
     <div class="card">
     <div class="card-body">
       <h5 class="card-title">Learn Yoruba</h5>
       <a href="#" class="btn btn-success">Click To Start</a>
     </div>
   </div>
+  </Link>
     </div>
-    </Link>
+   
     <div className='col-sm-6 col-lg-3'>
     <div class="card">
     <div class="card-body">
