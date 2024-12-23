@@ -1,0 +1,40 @@
+.main-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.learn-h4{
+    margin-left: 3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 4rem;
+}
+.main-body img{
+    width: 40rem;
+}
+.main-text p{
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+.btn-box{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.R-btn{
+    border: none;
+    background-color: rgba(27, 115, 57, 1);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: .7rem 1.5rem;
+}
+.T-btn{
+    border: 2px solid rgba(27, 115, 57, 1) ;
+    color: rgba(27, 115, 57, 1);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: .5rem 2.5rem;   
+}

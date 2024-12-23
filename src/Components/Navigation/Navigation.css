@@ -1,0 +1,35 @@
+/* navbar section starts*/
+.navbar{
+    background-color: white;
+  }
+  
+  .navbar h3 img{
+    margin-bottom: 1rem;
+  }
+  .navbar .navbar-nav .nav-items a{
+    color:rgba(27, 115, 57, 1);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-right: 2rem;
+  }
+  .navbar .navbar-nav .nav-items button{
+    padding: .5rem 1.5rem;
+    background-color:rgba(27, 115, 57, 1);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  .navbar .navbar-nav .nav-items a:hover{
+    color: rgba(27, 115, 57, 1);
+    font: bolder;
+  }
+  .navbar .navbar-nav .nav-items button:hover{
+    background-color: rgb(2, 39, 14);
+    color: white;
+  }
+  .navbar  .nav-icon{
+    width: 60px;
+  }
+  /* navbar section ends*/

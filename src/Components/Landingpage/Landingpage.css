@@ -1,0 +1,134 @@
+
+  /*Header section starts*/
+.Header-section{
+    background: url("../../Assets/Background.svg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    /* position: relative; */
+}
+.container-section{
+  background-color: rgba(27, 115, 72, 0.57);
+  width: 100%; 
+  height: 100vh;
+}
+
+ .Desc{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+   
+    text-align: center;
+    color: white;
+    padding-top: 20rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+.buttons button{
+    padding: .5rem 1.5rem ;
+    background-color: rgba(27, 115, 57, 1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+  /*Header section ends*/
+  .Desc-text{
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .Desc-text span{
+    color:rgba(27, 115, 57, 1) ;
+  }
+  .buttons .sign{
+    background-color: white;
+    color: rgba(27, 115, 57, 1);
+    border: 3.5px solid rgba(27, 115, 57, 1);
+  }
+  .CAT{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 0;
+  }
+  .Inquiry{
+    margin: 3rem 0;
+  }
+
+  .Inq-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .contact-button{
+    background-color:rgba(27, 115, 57, 1) ;
+    border: none;
+    border-radius: 20px;
+    padding: .5rem 2.5rem;
+    color: white;
+  }
+  .FAQ-button{
+    background-color:white ;
+    border: 3px solid rgba(27, 115, 57, 1);
+    border-radius: 20px;
+    padding: .5rem 2.5rem;
+    color:rgba(27, 115, 57, 1);
+  }
+  .footer{
+    background-color: rgba(27, 115, 57, 0.3);
+    padding: 4rem 0 0 0;
+  }
+  .app-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    margin: 1rem 0;
+  }
+  .app-icon h4{
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .footer-icon{
+    width: 50px;
+  }
+  .Quicklink span{
+    margin: 1rem 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Quicklink ul{
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .socials .icons{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    margin-bottom: 7rem;
+
+  }
+  .socials .icons .icon1{
+    width: 20px;
+  }
+  .footer-txt{
+    background-color: rgba(27, 115, 57, 0.55);
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    font-weight: 500;
+  }
+  .sub-button{
+    background-color:rgba(27, 115, 57, 1) ;
+    border: none;
+    padding: 0.2rem 1rem;
+    border-radius:  0 2rem 2rem 0 ;
+    color: white;
+  }
