@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import Loginimg from "../../Assets/loginimg.svg";
 import "./Login.css";
 import Navigation from "../Navigation/Navigation";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { baseURL } from "../api";
 import useAuth from "../Hook/useAuth";
 
 function Login() {
+
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate()
   const [error, setError] = useState("");
 
   const { setAuth } = useAuth();
@@ -36,13 +38,14 @@ function Login() {
         }
       );
       const accessToken = response;
-      const users = response?.date;
-      setAuth( {accessToken, users} );
+      const user = response?.data;
+      setAuth( {accessToken, user} );
+      navigate("/welcome");
       // setError(response);
       console.log(response);
     } catch (error) {
-      console.log(error);
-      // setError(error.response);
+      console.error("Login failed:", error.response?.data || error.message);
+      setError("Login failed. Please check your credentials.");
     }
   }
   return (
@@ -53,7 +56,6 @@ function Login() {
           <img src={Loginimg} alt="" />
         </div>
         <div className="form">
-        <form>
           <input
             type="Email"
             placeholder="Enter your email address"
@@ -77,12 +79,11 @@ function Login() {
             </div>{" "}
             <a href="#">Forgot Password?</a>
           </div>
-          </form>
         </div>
     
-        <Link to="/welcome">
+  
           <button className="loginpage-button" onClick={onSubmitUser}>Login</button>
-        </Link>
+      
         <Link to="/signup">
           <button className="signuppage-button" type="submit">
             SignUp

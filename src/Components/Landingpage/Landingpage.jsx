@@ -49,7 +49,7 @@ function Landingpage() {
               <div className="text">
                 <h4>Learn Speak Connect</h4>
                 <p>
-                  Learn your native language with [App Name], a<br/> fun,
+                  Learn your native language with Nativerse, a<br/> fun,
                   interactive, culturally immersive language <br/> learning
                   experience.
                 </p>
@@ -71,7 +71,7 @@ function Landingpage() {
             </div>
             <div className="col-sm-12 col-lg-6">
               <p>
-                Nativia was founded in 2020 with a mission to preserve and
+                Nativerse was founded in 2020 with a mission to preserve and
                 promote local languages, ensuring their survival for future
                 generations. We believe that language is a vital part of
                 cultural identity, and its loss can have a profound impact on

@@ -27,7 +27,7 @@ flex-direction: row;
 justify-content: space-between;
 }
 .loginpage-button{
-    width: 100%;
+    width: 25%;
     padding: .5rem 10rem;
     border: none;
     border-radius: 20px;
