@@ -3,7 +3,7 @@
     height: 100vh;
     color: white;
     text-align: center;
-    border-radius: 0  0 15rem 15rem;
+    /* border-radius: 0  0 15rem 15rem; */
 }
 .welcome-section h2{
     padding-top: 6rem;
