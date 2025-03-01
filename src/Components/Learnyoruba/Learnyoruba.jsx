@@ -11,7 +11,7 @@ function Learnyoruba() {
     <Navigation/>
     <div className='yoruba-container'>
     <div className='yoruba-content'>
-   <Link to="/yoruba"><MdArrowBackIosNew className='back-icon'/></Link> 
+   <Link to="/app/yoruba"><MdArrowBackIosNew className='back-icon'/></Link> 
     <h2> Lesson 1 </h2>
     </div>
     </div>
@@ -26,7 +26,7 @@ function Learnyoruba() {
     Mo feran ikoni.<br/>
     </p></div>
     <div className='btn-box'>
-    <Link to="/englishyoruba"><button className='R-btn'>Read in English</button></Link>
+    <Link to="/app/englishyoruba"><button className='R-btn'>Read in English</button></Link>
     <button className='T-btn'>Take a Test</button>
     </div>
     <p className="footer-txt"> &copy; 2024 Mativerse. All rights Reserved</p>

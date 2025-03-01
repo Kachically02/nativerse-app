@@ -5,40 +5,44 @@ import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
 
 import { baseURL } from "../api";
-import axios from "axios"
+import axios from "axios";
+import useAuth from "../Hook/useAuth";
+import { toast } from 'react-toastify';
 
- function Signup() {
+function Signup() {
   const [values, setValues] = useState({
     name: "",
     email: "",
     password: "",
   });
-  const [error, setError]= useState("")
+  const { setAuth } = useAuth();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
-  async function onSubmitUser (e)  {
+
+  async function onSubmitUser(e) {
     e.preventDefault();
     const userDetails = {
       name: values.name,
       email: values.email,
-      password: values.password
+      password: values.password,
+    };
+
+    try {
+      const { data } = await axios.post(`${baseURL}/register`, userDetails);
+      setAuth(data);
+
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data?.message ?? 'Error occured during signup');
     }
-  
-  try {
-    const response = await axios.post(`${baseURL}/register`, userDetails)
-    setError(response.data.message)
-    console.log(response)
-  } catch (error) {
-    console.log(error)
-    setError(error.response.data.message)
-  }}
+  }
   return (
     <div>
       <Navigation />
       <div className="Signup">
-      <p>{error}</p>
         <div>
           <img src={Signupimg} alt="" />
         </div>
@@ -69,7 +73,11 @@ import axios from "axios"
           />
         </div>
 
-        <Link to="/signup"><button className="acc-button" onClick={ onSubmitUser}>Create Account</button></Link>
+        <Link to="/signup">
+          <button className="acc-button" onClick={onSubmitUser}>
+            Create Account
+          </button>
+        </Link>
       </div>
       <p className="footer-txt"> &copy; 2024 Nativerse. All rights Reserved</p>
     </div>

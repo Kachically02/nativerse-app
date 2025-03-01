@@ -36,8 +36,10 @@ justify-content: space-between;
     margin-top: 2rem;
 }
 .signuppage-button{
-    width: 100%;
-    padding: .5rem 10rem;
+    text-decoration: none;
+    width: 25%;
+    padding: .5rem 0;
+    text-align: center;
     border: none;
     border-radius: 20px;
     background-color:  rgba(27, 115, 57, 1);
