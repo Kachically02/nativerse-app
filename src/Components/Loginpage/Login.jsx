@@ -4,6 +4,7 @@ import "./Login.css";
 import Navigation from "../Navigation/Navigation";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from 'react-toastify';
 import { baseURL } from "../api";
 import useAuth from "../Hook/useAuth";
 
@@ -13,7 +14,6 @@ function Login() {
     password: "",
   });
   const navigate = useNavigate();
-  const [error, setError] = useState("");
 
   const { setAuth } = useAuth();
   const handleChange = (e) => {
@@ -40,19 +40,17 @@ function Login() {
       const user = response?.data;
       setAuth({ accessToken, user });
       if (user) {
-        navigate("/welcome");
+        navigate("/app/welcome");
       } else {
         console.log("incorrect credentials");
       }
-      // setError(response);
-      console.log(response);
     } catch (error) {
       console.error("Login failed:", error.response?.data || error.message);
-      setError("Login failed. Please check your credentials.");
+      toast.error("Login failed. Please check your credentials.");
     }
   }
   return (
-    <div>
+    <form onSubmit={onSubmitUser}>
       <Navigation />
       <div className="loginpage">
         <div>
@@ -84,18 +82,16 @@ function Login() {
           </div>
         </div>
 
-        <button className="loginpage-button" onClick={onSubmitUser}>
+        <button type="submit" className="loginpage-button">
           Login
         </button>
 
-        <Link to="/signup">
-          <button className="signuppage-button" type="submit">
-            SignUp
-          </button>
+        <Link to="/signup" className="signuppage-button">
+            Sign up
         </Link>
       </div>
       <p className="footer-txt"> &copy; 2024 Mativerse. All rights Reserved</p>
-    </div>
+    </form>
   );
 }
 

@@ -12,11 +12,11 @@ function Yoruba() {
     <Navigation/>
     <div className='yoruba-container'>
     <div className='yoruba-content'>
-    <Link to="/welcome"><MdArrowBackIosNew className='back-icon'/></Link>
+    <Link to="/app/welcome"><MdArrowBackIosNew className='back-icon'/></Link>
     <h2> Yoruba Language </h2>
     </div>
     </div>
-    <Link to="/learnyoruba">
+    <Link to="/app/learnyoruba">
     <div class="card" >
     <div class="card-header">
     Lesson 1

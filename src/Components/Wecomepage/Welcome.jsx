@@ -31,7 +31,7 @@ function Welcome() {
     </div>
     
     <div className='col-sm-6 col-lg-3'>
-    <Link to="/yoruba">
+    <Link to="/app/yoruba">
     <div class="card">
     <div class="card-body">
       <h5 class="card-title">Learn Yoruba</h5>
